@@ -1,0 +1,225 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.product{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-lower{
+    padding: 20px;
+    background-color: aqua;
+    margin: 150px 30px 20px 20px;
+    max-width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* White text */
+}
+
+.product {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.product > h1{
+  text-align: center;
+  margin: 250px 30px 20px 20px;
+}
+
+.product>p{
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.product-lower {
+  padding: 20px;
+  background-color: #2c2c2e; /* Dark gray background */
+  max-width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 12px; /* Added for Apple-like rounded corners */
+}
+
+.card {
+  background-color: #1c1c1e; /* Dark card background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
+  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #3a3a3c; /* Subtle border */
+}
+
+.card img {
+  width: 100%;
+  max-height: 200px;
+  max-width: 200px;
+  border-radius: 10px;
+  /* object-fit: contain; */
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+  filter: brightness(0.95); /* Slightly brighten images for contrast */
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid rgb(36, 124, 255);
+  border-radius: 10px;
+  background-color: #2c2c2e;
+  color:blanchedalmond; /* White text */
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #0a84ff; /* Apple's blue accent */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: #242426; /* Slightly lighter on hover */
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card a:hover {
+  background-color: #0071e3; /* Darker Apple blue on hover */
+  transform: scale(1.05);
+}
+
+hr{
+  background-color:#0071e3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .product-lower {
+    margin: 100px 20px;
+  }
+
+  /* .card {
+    max-width: 250px;
+  } */
+
+  .card h3 {
+    font-size: 14px;
+  }
+
+  .card img {
+    max-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-lower {
+    margin: 80px 15px;
+  }
+
+  .card {
+    max-width: 250px;
+  }
+
+  .card h3 {
+    font-size: 13px;
+  }
+
+  .card img {
+    max-height: 160px;
+  }
+
+  .product {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-lower {
+    margin: 60px 10px;
+    padding: 15px;
+  }
+
+  .product > h1{
+    font-size: 1.5rem;
+  }
+
+  .product>p{
+    font-size: 0.6rem;
+  }
+
+  .card {
+    max-width: 250px;
+  }
+
+  .card h3 {
+    font-size: 12px;
+  }
+
+  .card img {
+    max-height: 140px;
+  }
+
+  .card a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

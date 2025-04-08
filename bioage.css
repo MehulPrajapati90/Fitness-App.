@@ -1,0 +1,318 @@
+/* Biological Age Calculator - Apple Dark UI */
+#bio-age-calculator {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Container Styles */
+#bio-age-calculator-protect {
+  margin: 100px 20px 20px;
+}
+
+/* Typography */
+#bio-age-calculator h1 {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+/* Input Section */
+#bio-age-input-section {
+  background-color: #1c1c1e;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#bio-age-input-section h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 20px 0 15px;
+  font-weight: 500;
+}
+
+#bio-age-input-section h3:first-child {
+  margin-top: 0;
+}
+
+/* Form Elements */
+#bio-age-calculator label {
+  display: block;
+  margin-bottom: 20px;
+  color: #8e8e93;
+  font-size: 0.95rem;
+}
+
+#bio-age-calculator input[type="number"],
+#bio-age-calculator select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #3a3a3c;
+  background-color: #2c2c2e;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#bio-age-calculator input[type="number"]:focus,
+#bio-age-calculator select:focus {
+  outline: none;
+  border-color: #0a84ff;
+}
+
+/* Special Input Groups */
+#bio-age-bp-inputs,
+#bio-age-cholesterol-inputs {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+#bio-age-bp-inputs input,
+#bio-age-cholesterol-inputs input {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Checkbox Styles */
+#bio-age-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+#bio-age-calculator input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3a3a3c;
+  border-radius: 4px;
+  background-color: #2c2c2e;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#bio-age-calculator input[type="checkbox"]:checked {
+  background-color: #0a84ff;
+  border-color: #0a84ff;
+}
+
+#bio-age-calculator input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Button Styles */
+#bio-age-calculate-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #0a84ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+#bio-age-calculate-btn:hover {
+  background-color: #0071e3;
+}
+
+/* Results Section */
+#bio-age-result-section {
+  background-color: #1c1c1e;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#bio-age-result-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+#bio-age-result-section h2 strong {
+  color: #0a84ff;
+  font-weight: 600;
+}
+
+#bio-age-result-text {
+  color: #8e8e93;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Content Sections */
+#bioage-content {
+  min-height: 100vh;
+  width: 100%;
+  margin: 30px;
+  border-radius: 20px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  background: #2f2f2f;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+#bioage-content-text,
+#bioage-content-visual {
+  width: 45%;
+  max-width: 600px;
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+#bioage-content-text {
+  margin-right: 20px;
+}
+
+#bioage-content h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+}
+
+#bioage-content p {
+  text-align: justify;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: #1c1c46;
+}
+
+#bioage-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+#bioage-content img:hover{
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #bioage-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #bioage-content-text,
+  #bioage-content-visual {
+    width: 90%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #bio-age-calculator {
+    padding: 20px 15px;
+  }
+  
+  #bio-age-calculator h1 {
+    font-size: 1.8rem;
+  }
+  
+  #bio-age-input-section {
+    padding: 20px;
+  }
+  
+  #bio-age-result-section {
+    padding: 20px;
+  }
+  
+  #bioage-content h1 {
+    color: black;
+    font-size: 1.75rem;
+  }
+  
+  #bioage-content p {
+    font-size: 1rem;
+  }
+  
+  #bioage-content-text,
+  #bioage-content-visual {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  #bio-age-calculator {
+    padding: 15px;
+  }
+  
+  #bio-age-calculator h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #bio-age-bp-inputs,
+  #bio-age-cholesterol-inputs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  #bio-age-calculator input[type="number"],
+  #bio-age-calculator select {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  #bio-age-calculate-btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+  
+  #bio-age-result-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  #bioage-content h1 {
+    font-size: 1rem;
+  }
+  
+  #bioage-content p {
+    font-size: 0.6rem;
+  }
+  
+  #bioage-content-text,
+  #bioage-content-visual {
+    padding: 20px;
+  }
+}

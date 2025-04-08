@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #000000; /* Pure black background */
+}
+
+/* Base styles */
+.influence {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #000000; /* Pure black background */
+}
+
+.influence > h1{
+  text-align: center;
+  margin: 250px 30px 20px 20px;
+}
+
+.influence>p{
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.influence-lower {
+  padding: 20px;
+  background-color: #1C1C1E; /* Dark gray background */
+  width: 100%;
+  max-width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  border-radius: 12px; /* Apple-style rounded corners */
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2C2C2E; /* Slightly lighter gray for cards */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 280px;
+  transition: transform 0.3s ease;
+  border: 0.5px solid #3A3A3C; /* Subtle border */
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+  background: #3A3A3C; /* Slightly lighter on hover */
+}
+
+.profile img {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.profile h3 {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #2C2C2E;
+  padding: 10px 20px;
+  border: 2px solid rgb(48, 110, 255);
+  border-radius: 10px;
+  color: #FFFFFF; /* White text */
+}
+
+.profile a {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #ff0178; /* Apple's blue accent */
+  color: blanchedalmond;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.profile a:hover {
+  background: #007AFF; /* Slightly darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .influence-lower {
+    margin-top: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .profile {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .influence-lower {
+    margin-top: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .profile {
+    max-width: 100%;
+  }
+
+  .profile h3 {
+    font-size: 1rem;
+  }
+
+  .profile h4 {
+    font-size: 0.9rem;
+  }
+
+  .profile a {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .influence {
+    padding: 10px;
+  }
+
+  .influence > h1{
+    font-size: 1.5rem;
+  }
+
+  .influence>p{
+    font-size: 0.6rem;
+  }
+
+  .influence-lower {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 60px;
+  }
+
+  .profile {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .profile h3 {
+    font-size: 0.9rem;
+  }
+
+  .profile h4 {
+    font-size: 0.85rem;
+  }
+
+  .profile a {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}

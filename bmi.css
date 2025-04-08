@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: none;
+}
+
+/* BMI Calculator Styles with Apple Dark UI */
+.bmi-calculator {
+  margin: 120px 20px 20px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.bmi-calculator-protect{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bmi-calculator h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.bmi-cal {
+  background-color: #1c1c1e;
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group h2 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #8e8e93;
+  font-weight: 500;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #3a3a3c;
+  background-color: #2c2c2e;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #0a84ff;
+}
+
+input[type="number"]:disabled {
+  opacity: 0.7;
+  background-color: #2c2c2e;
+}
+
+.input-group label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.input-group input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3a3a3c;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  background-color: #2c2c2e;
+  transition: all 0.2s ease;
+}
+
+.input-group input[type="radio"]:checked {
+  border-color: #0a84ff;
+}
+
+.input-group input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #0a84ff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+
+.input-group input[type="radio"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calculate-btn {
+  background-color: #0a84ff;
+  color: white;
+}
+
+.calculate-btn:hover {
+  background-color: #0071e3;
+}
+
+.reset-btn {
+  background-color: #2c2c2e;
+  color: #0a84ff;
+  border: 1px solid #3a3a3c;
+}
+
+.reset-btn:hover {
+  background-color: #3a3a3c;
+}
+
+.results {
+  background-color: #2c2c2e;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.results h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.results p {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.results strong {
+  color: #8e8e93;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .bmi-calculator h1 {
+    font-size: 1.8rem;
+  }
+  
+  .bmi-cal {
+    padding: 20px;
+  }
+  
+  .input-group h2 {
+    font-size: 1rem;
+  }
+  
+  input[type="number"] {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  button {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .bmi-calculator {
+    padding: 15px;
+  }
+  
+  .bmi-calculator h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .results {
+    padding: 15px;
+  }
+  
+  .results h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* bmi about */
+/* Main Container Styling - Apple Inspired */
+.bmi-about {
+  min-height: 100vh;
+  width: 100%;
+  margin: 30px;
+  border-radius: 20px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  background: rgb(47, 47, 47);
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Text Content Section - Left Side */
+.bmi-text-content {
+  width: 45%;
+  max-width: 600px;
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-right: 20px;
+}
+
+/* Visual Content Section - Right Side */
+.bmi-visual-content {
+  width: 45%;
+  max-width: 600px;
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Typography */
+.bmi-about h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: #161734;
+}
+
+.bmi-about p {
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  color: #55558d;
+}
+
+/* Image Styling */
+.bmi-about img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.bmi-about img:hover{
+  transform: scale(1.02);
+}
+
+/* Content Sections */
+.bmi-text-content-1,
+.bmi-text-content-2,
+.bmi-visual-content-1,
+.bmi-visual-content-2 {
+  margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bmi-about {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .bmi-text-content,
+  .bmi-visual-content {
+    width: 90%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bmi-about h1 {
+    font-size: 28px;
+  }
+  
+  .bmi-about p {
+    font-size: 16px;
+  }
+  
+  .bmi-text-content,
+  .bmi-visual-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bmi-about h1 {
+    font-size: 18px;
+  }
+  .bmi-about p {
+    font-size: 10px;
+  }
+  
+  .bmi-text-content,
+  .bmi-visual-content {
+    padding: 20px;
+  }
+}
